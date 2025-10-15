@@ -18,7 +18,7 @@ pipeline{
 	steps{
 	echo "Run application in Docker Container"
 	bat "docker rm -f newscontainer || exit 0"
-	bat "docker run -d -p 5001:5001 --name mycontainer newsearch"
+	bat "docker run -d -p 5001:5001 --name newscontainer newssearch"
 	}
 	}
 	}
