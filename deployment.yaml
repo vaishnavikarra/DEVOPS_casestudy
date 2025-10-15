@@ -1,0 +1,21 @@
+apiVersion: apps/v2
+kind: Deployment
+metadata:
+  name: kubeapp-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: kubeapp
+  template:
+    metadata:
+      labels:
+        app: kubeapp
+    spec:
+      containers:
+      - name: kubeapp
+        image: vaishnavikarra/newssearch:latest
+
+        ports:
+
+        - containerPort: 5001
