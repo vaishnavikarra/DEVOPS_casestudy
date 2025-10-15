@@ -1,0 +1,13 @@
+apiVersion: v2
+kind: Service
+metadata:
+  name: kubeapp-service
+spec:
+  selector:
+    app: kubeapp
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 5001
+      nodePort: 30089
+  type: NodePort
